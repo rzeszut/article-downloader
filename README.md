@@ -4,7 +4,7 @@ article-downloader
 A web scraper for downloading article metadata (title, journal, authors, year, etc.)
 
 Prerequisites
-=============
+-------------
 Install pip and virtualenv:
 
     sudo apt-get install python-pip python-virtualenv
