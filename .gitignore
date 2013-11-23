@@ -1,0 +1,9 @@
+*~
+*.swp
+
+# python
+venv
+*.pyc
+
+# database, wow wow
+*.db
