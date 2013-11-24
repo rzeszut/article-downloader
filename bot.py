@@ -10,7 +10,7 @@ session = models.Session()
 
 u = url.prepare_url({
     'query': 'big data',
-    'num': 500,
+    'num': 1500,
     'start': 501
 })
 print "Getting %s ..." % u
@@ -23,6 +23,9 @@ for l in search_page.links:
     db_page = convert.convert_article(article_page)
     session.add(db_page)
     i = i + 1
+    if i % 100 == 0:
+        session.commit()
+        print "Saved %d records." % i
 
 session.commit()
 print "Saved."
