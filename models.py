@@ -1,4 +1,3 @@
-import sqlalchemy
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref, sessionmaker
@@ -22,6 +21,7 @@ class Article(Base):
     issn = Column(String(9))
     year = Column(Integer)
     url = Column(String(256))
+    source = Column(String(32))
 
 class Author(Base):
     __tablename__ = 'authors'

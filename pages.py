@@ -115,5 +115,7 @@ class BibliographicPage:
         if self.year is None:
             y = re.search(self.YEAR_PATTERN, field)
             if y is not None:
-                self.year = int(y.group(0))
+                year = int(y.group(0))
+                if year >= 1970 and year <= 2014:
+                    self.year = year
 

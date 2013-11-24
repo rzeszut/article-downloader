@@ -16,6 +16,7 @@ def convert_article(article_page):
                           issn = article_page.issn,
                           year = article_page.year,
                           url = article_page.url,
+                          source = 'vls2.icm.edu.pl',
                           authors = authors,
                           keywords = keywords)
 
