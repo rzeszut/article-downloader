@@ -1,28 +1,14 @@
-import requesocks as r
 import re
-import lxml.html as html
 
 import config
-
-session = r.session()
-session.proxies = {
-    'http': config.PROXY_ADDRESS,
-    'https': config.PROXY_ADDRESS
-}
-
-def get_page(url):
-    global session
-    resp = session.get(url)
-    dom = html.fromstring(resp.text)
-    dom.make_links_absolute(url)
-    return dom
+import connection as con
 
 class SearchPage:
     BIBL_PAGE_PATTERN = re.compile("^.*Bibliographic Page.*$")
 
     def __init__(self, url):
         self.url = url
-        self.page = get_page(url)
+        self.page = con.get_page(url)
         self.initialize()
 
     def initialize(self):
@@ -45,7 +31,7 @@ class BibliographicPage:
 
     def __init__(self, url):
         self.url = url
-        self.page = get_page(url)
+        self.page = con.get_page(url)
         self.journal = None
         self.title = None
         self.authors = None
