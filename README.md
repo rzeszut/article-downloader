@@ -9,6 +9,10 @@ Install pip and virtualenv:
 
     sudo apt-get install python-pip python-virtualenv
 
+Install lxml required libraries:
+
+    sudo apt-get install libxml2-dev libxslt1-dev
+
 Create virtualenv and install requirements:
 
     virtualenv venv
@@ -22,3 +26,4 @@ Set up SSH proxy tunnel:
 You can now run the application:
 
     ./bot.py
+
