@@ -2,7 +2,7 @@ import models
 
 import url
 import pages
-import convert
+import article_convert as convert
 
 def download_articles(parameters):
     session = models.Session()

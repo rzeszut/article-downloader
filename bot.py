@@ -2,6 +2,7 @@
 
 import models
 import vls2
+import ieee
 import patent
 
 models.setup_db()
@@ -11,8 +12,14 @@ models.setup_db()
 #     'num': 300
 # })
 
-patent.download_patents({
-    'query-abstract-or-title': 'big data',
-    'pages': 20
+ieee.download_articles({
+    'query': 'big data',
+    'pages': 7,
+    'start-page': 14
 })
+
+#patent.download_patents({
+#    'query-abstract-or-title': 'hadoop',
+#    'pages': 5
+#})
 

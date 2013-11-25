@@ -1,6 +1,5 @@
 import re
 
-import config
 import connection as con
 
 class SearchPage:
@@ -40,6 +39,7 @@ class BibliographicPage:
         self.publisher = None
         self.issn = None
         self.year = None
+        self.source = 'vls2.icm.edu.pl'
         self.initialize()
 
     def initialize(self):
